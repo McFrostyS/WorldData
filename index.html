@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Sergio Aguado" />
+        <meta name="description" content="World countries data Website" />
+        <meta name="keywords" content="HTML, CSS, JavaScript, Frontend" />
+        <title>World Countries Data</title>
+        <!-- FONT AWESOME -->
+        <script src="https://kit.fontawesome.com/0ce218d0bf.js" crossorigin="anonymous"></script>
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <!-- TWITTER -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://mcfrostys.github.io/worlddata" />
+        <meta property="twitter:title" content="World Countries Data" />
+        <meta
+            property="twitter:description"
+            content="This is a World countries data Website. Here you'll see all the countries, flags and his data. "
+        />
+        <meta property="twitter:image" content="https://mcfrostys.github.io/worlddata/img/worlddata.png" />
+        <!-- FACEBOOK -->
+        <meta property="og:title" content="World Countries Data" />
+        <meta property="og:url" content="https://mcfrostys.github.io/worlddata" />
+        <meta
+            property="og:description"
+            content="This is a World countries data Website. Here you'll see all the countries, flags and his data."
+        />
+        <meta property="og:image" content="https://mcfrostys.github.io/worlddata/img/worlddata.png" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/style.css" />
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    </head>
+    <body>
+        <header id="countriesHeader">
+            <h2>World Countries Data</h2>
+            <hr />
+        </header>
+
+        <main>
+            <div class="wrapper">
+                <div class="search">
+                    <div class="searchButtons"></div>
+                    <div class="searchContainer">
+                        <input type="text" placeholder="Buscar..." id="searchInput" />
+                    </div>
+                    <div class="buttons">
+                        <button class="name">Name</button>
+                        <button class="capital">Capital</button>
+                        <button class="population">Population</button>
+                        <button class="goGraph"><a href="#graph">📈</a></button>
+                    </div>
+                </div>
+                <hr />
+                <div class="content">
+                    <div class="countries"></div>
+
+                    <h4 class="graph-title"></h4>
+                    <div class="graph-buttons" id="graph">
+                        <button class="btnpopulation">Population</button>
+                        <button class="btnlanguages">Languages</button>
+                    </div>
+                    <div class="graphs">
+                        <div class="graph-wrapper" id="stat">
+                            <canvas id="graphPopulation"></canvas>
+                            <canvas id="graphLanguages"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="topFunction()" class="btn-subir" title="Ir arriba">&#129045;</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Copyright ©2023 All rights reserved | Page by Sergio Aguado</p>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="./data/countries_data.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
